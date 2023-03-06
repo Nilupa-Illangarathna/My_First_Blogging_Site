@@ -1,0 +1,52 @@
+<!-- Head.ejs adding -->
+<%- include('../partials/header'); %>
+<body>  
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div> 
+    <!-- Main body -->
+    <div id="main">
+      <!-- Navigation bar -->
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #474747;">
+        <a id="HeadingOfThePage" class="navbar-brand nav_a Body_Padding_left " onclick="openNav()" href="">DAILY JOURNAL</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto Body_Padding_right">
+            <li class="nav-item">
+              <a class="nav-link nav_a" onclick="openNav()"  href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_a" href="#AboutUs">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_a" href="#ContactUs">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- the button used to open/close sidebar -->
+    <div class="SpaceDiv"></div>
+    <span class="open_close_sidebar_button Body_Padding_left" onclick="openNav()">&#9776; Click</span>
+    <!-- Contents of the body -->
+    <div class="SpaceDiv"></div>
+    <div class="SpaceDiv"></div>
+    <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
+    <p class="Body_Padding_left Body_Padding_right"><%= StartingContent %></p> 
+
+
+    <%- include('../partials/footer'); %>
+    
+  </div>
+
+</body>
+
+<%- include('../partials/scripts_links'); %>
+
+</html>

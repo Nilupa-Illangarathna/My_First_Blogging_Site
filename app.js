@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 app.get("/",function(req,res){
     // res.render("homepage",{textVariable:HeaderVariable});
     res.render(
-            "home" ,
+            "pages/home" ,
             {
                 HeaderOfThePage:HeaderVariable,
                 StartingContent: HomeStartingContent
