@@ -17,19 +17,19 @@ body {
   padding-bottom: 70px;
 }
 
-.Body_Margin_right{
-  margin-right: 64px;
-}
-.Body_Margin_left{
-  margin-left: 64px;
-}
-
 .Body_Padding_right{
   padding-right: 64px;
 }
 .Body_Padding_left{
   padding-left: 64px;
 }
+
+.Body_Margin_right{
+  margin-right: 24px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
 
 .SpaceDiv{
   height: 20px;
@@ -68,7 +68,7 @@ nav {
 
 
 /* Sidebar related */
-.sidenav {
+.sidenav1 {
   height: 100%;
   width: 0;
   position: fixed;
@@ -77,11 +77,11 @@ nav {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.35s;
   padding-top: 60px;
 }
 
-.sidenav a {
+.sidenav1 a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -90,11 +90,11 @@ nav {
   transition: 0.3s;
 }
 
-.sidenav a:hover {
+.sidenav1 a:hover {
   color: #f1f1f1; 
 }
 
-.sidenav .closebtn {
+.sidenav1 .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -103,13 +103,13 @@ nav {
 }
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left .35s;
   padding: 0px;
 }
 
 @media (max-width: 850px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav1 {padding-top: 15px;}
+  .sidenav1 a {font-size: 18px;}
 
   .Body_Padding_right{padding-right: 12px;}
   .Body_Padding_left{padding-left: 12px;}
@@ -140,7 +140,7 @@ footer{
 .footer_a{
   text-decoration:none;
   color:gray;
-  transition:0.5s;
+  transition:0.35s;
 }
 
 .footer_a:hover{
@@ -158,3 +158,15 @@ footer{
   }
 }
 
+
+
+/* Compose page related */
+.form-control{
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.btn-primary{
+  background-color: #383636;
+  border-color: #383636;
+}

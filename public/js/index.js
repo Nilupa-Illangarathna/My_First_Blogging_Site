@@ -1,5 +1,5 @@
 
-function openNav() {
+function openNav1() {
 
   if(document.getElementById("mySidenav").style.width === "0%" && document.getElementById("main").style.marginLeft === "0%"){
     document.getElementById("mySidenav").style.width = "40%";
@@ -17,20 +17,10 @@ function closeNav() {
   document.getElementById("HeadingOfThePage").style.margin= "0rem 0rem 0rem 0rem";
 }
 
+// //Date picker
+// let startDate = document.getElementById('startDate')
 
-// function openNav() {
-//   document.getElementById("mySidenav").style.width = "250px";
-//   document.getElementById("main").style.marginLeft = "250px";
-// }
-
-// function closeNav() {
-//   document.getElementById("mySidenav").style.width = "0";
-//   document.getElementById("main").style.marginLeft= "0";
-// }
-
-
-/* --- Show DIV --- */
-$( '.example' ).removeClass( 'fadeOutRight' ).show().addClass( 'fadeInRight' );
-
-/* --- Hide DIV --- */
-$( '.example' ).removeClass( 'fadeInRight' ).addClass( 'fadeOutRight' );
+// startDate.addEventListener('change',(e)=>{
+//   let startDateVal = e.target.value
+//   document.getElementById('startDateSelected').innerText = startDateVal
+// })

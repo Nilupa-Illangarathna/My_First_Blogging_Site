@@ -1,0 +1,50 @@
+<!-- Head.ejs adding -->
+<%- include('../partials/header'); %>
+<body>  
+    <!-- Sidebar -->
+    <%- include('../partials/sidebar'); %> 
+    <!-- Main body -->
+    <div id="main">
+        <!-- Navigation bar -->
+      <%- include('../partials/navigation_bar'); %>
+      <!-- the button used to open/close sidebar -->
+      <div class="SpaceDiv"></div>
+      <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
+      <!-- Contents of the body -->
+      <div class="SpaceDiv"></div>
+      <div class="SpaceDiv"></div>
+      <form action="/compose" method="post" class="Body_Padding_left">
+        <!-- text input getter -->
+        <label for="comment">Date</label>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                <div class="container shadow min-vh-100 py-2">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <input name="date" id="startDate" class="form-control" type="date" />
+                        </div>
+                    </div>
+                </div>
+                <label for="comment">Subject</label>
+                <textarea name="title" class="form-control" rows="1" id="comment"></textarea>
+                <label for="comment">Content</label>
+                <textarea name="content" class="form-control" rows="2" id="comment"></textarea>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                <button name="ConfirmBtn" type="confirm" class="btn btn-primary Body_Margin_right">Add</button>
+                <button name="CancelBtn" type="cancel" class="btn btn-default Body_Margin_right">Cancel</button>
+            </div>
+        </div>
+      </form>
+
+
+    <%- include('../partials/footer'); %>
+    
+  </div>
+
+</body>
+
+<%- include('../partials/scripts_links'); %>
+
+</html>
