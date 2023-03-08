@@ -67,16 +67,17 @@ app.get("/compose",function(req,res){
 //////////////////////////////////////////////////
 //To use any post request/////////////////////////
 app.get("/posts/:newPost",function(req,res){
-    console.log(req.params.newPost);
-    res.render(
-        "pages/home" ,
-        {
-            StateOfThePage:1,
-            IndexesArray:[],
-            HeaderOfThePage : HomeHeaderVariable,
-            ArrayofPosts : PostsData,
-        }
-    );
+    if(req.params.newPost!==""){
+        res.render(
+            "pages/home_2" ,
+            {
+                StateOfThePage:0,
+                IndexesArray:[],
+                HeaderOfThePage : HomeHeaderVariable,
+                ArrayofPosts : PostsData,
+            }
+        );
+    }
 })
 app.get("/posts/:newPost/:secondPost",function(req,res){
     console.log(req.params.newPost);

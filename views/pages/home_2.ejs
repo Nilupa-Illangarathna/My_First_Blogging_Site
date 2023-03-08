@@ -1,0 +1,51 @@
+<!-- Head.ejs adding -->
+<%- include('../partials/header'); %>
+
+<% let currentPostData = -1; %>
+
+
+<body>  
+    <!-- Sidebar -->
+    <%- include('../partials/sidebar'); %>
+    <!-- Main body -->
+    <div id="main">
+      <!-- Navigation bar -->
+    <%- include('../partials/navigation_bar'); %>
+    <!-- the button used to open/close sidebar -->
+    <div class="SpaceDiv"></div>
+    <span class="open_close_sidebar_button Body_Padding_left" onclick="openNav1()">&#9776; Click</span>
+    <!-- Contents of the body -->
+    <div class="SpaceDiv"></div>
+    <div class="SpaceDiv"></div>
+
+    
+    <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
+
+
+    <% if(ArrayofPosts.length ===0 && currentPostData=== -1){  %>
+      <p class="Body_Padding_left Body_Padding_right">Compose a new post</p> 
+    <% } else{ %>
+            <% if(ArrayofPosts.length !==0 && currentPostData === -1){  %>
+        <p class="Body_Padding_left Body_Padding_right">Select a post</p> 
+
+        
+      <% } else{ %>      
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Date %></p> 
+        <br>
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Title %></p> 
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Content %></p> 
+        <br>
+      <% } %>
+    <% } %>
+
+
+
+    <%- include('../partials/footer'); %>
+    
+  </div>
+
+</body>
+
+<%- include('../partials/scripts_links'); %>
+
+</html>
