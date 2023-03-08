@@ -6,7 +6,8 @@ const ejs = require("ejs");
 
 
 // GloblalVariables
-const Posts=[];
+const PostsData=[];
+// var arr =[  [date,[title,[posts]]]   ];
 
 
 // instantiation express
@@ -28,8 +29,10 @@ app.get("/",function(req,res){
     res.render(
             "pages/home" ,
             {
+                StateOfThePage:0,
+                IndexesArray:[],
                 HeaderOfThePage : HomeHeaderVariable,
-                StartingContent : Posts,
+                ArrayofPosts : PostsData,
             }
         );
 })
@@ -60,6 +63,28 @@ app.get("/compose",function(req,res){
         );
 })
 
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//To use any post request/////////////////////////
+app.get("/posts/:newPost",function(req,res){
+    console.log(req.params.newPost);
+    res.render(
+        "pages/home" ,
+        {
+            StateOfThePage:1,
+            IndexesArray:[],
+            HeaderOfThePage : HomeHeaderVariable,
+            ArrayofPosts : PostsData,
+        }
+    );
+})
+app.get("/posts/:newPost/:secondPost",function(req,res){
+    console.log(req.params.newPost);
+    console.log(req.params.secondPost);
+})
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
 //get responses from html pages
 // Home page
 app.post("/",function(req,res){
@@ -73,17 +98,42 @@ app.post("/about",function(req,res){
 app.post("/contact",function(req,res){
 })
 // Compose page
+
+
 app.post("/compose",function(req,res){
-    if(req.body.title!=="" && req.body.content!==""){
-        const post={
-        Date : req.body.date,
-        Title : req.body.title,
-        Content : req.body.content,
+    if(req.body.title!=="" && req.body.content!=="" && req.body.date!==""){
+        if(PostsData.length!==0){
+            var dateCheck=false;
+            for(let i=0;i<PostsData.length;i++){
+                if(PostsData[i][0]===req.body.date){
+                    var titleCheck=false;
+                    for(let j=0;j<PostsData[i].length;j++){
+                    if(PostsData[i][j][0]===req.body.title){
+                        PostsData[i][j].push(req.body.content);
+                        console.log("yes");
+                        titleCheck=true;
+                    }
+                    }
+                    if(!titleCheck){
+                        console.log("no");
+                        PostsData[i].push([req.body.title,[req.body.content]]);
+                    }
+                    dateCheck=true;
+                }
+            }
+            if(!dateCheck){
+                console.log("no");
+                PostsData.push([req.body.date,[req.body.title,[req.body.content]]]);
+            }
+        }
+        else{
+            console.log("no");
+            PostsData.push([req.body.date,[req.body.title,[req.body.content]]]);
+        }
     }
-    Posts.push(post);
-    console.log(Posts);
-    }
-})
+    console.log(req.body);
+}
+)
 
 //making port 3000 listen for this web page
 app.listen(3000,function(){

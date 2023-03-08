@@ -1,0 +1,25 @@
+<% if(StateOfThePage===0){ %>
+    <div id="mySidenav1" class="sidenav1">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <% if(ArrayofPosts.length!==0){ %>
+            <% for(let i=0; i < ArrayofPosts.length ; i++){ %>
+                <!-- Creating the dynamic link with indexes -->
+                <% var Link = "/posts/" + i.toString(); %>
+                <!-- Create the object with link -->
+                <a href=<%= Link %>><%= ArrayofPosts[i][0] %></a>
+            <% } %>
+        <% } %>
+    </div> 
+    <% } else {%>
+    <div id="mySidenav1" class="sidenav1">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <% if(ArrayofPosts.length!==0){ %>
+            <% for(let i=0; i < ArrayofPosts.length ; i++){ %>
+                <!-- Creating the dynamic link with indexes -->
+                <% var Link = "/posts/" + i.toString(); %>
+                <!-- Create the object with link -->
+                <a href=<%= Link %>><%= ArrayofPosts[i][0] %></a>
+            <% } %>
+        <% } %>
+    </div> 
+    <% } %>

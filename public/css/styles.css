@@ -108,7 +108,7 @@ nav {
 }
 
 @media (max-width: 850px) {
-  .sidenav1 {padding-top: 15px;}
+  .sidenav1 {padding-top: 65px;}
   .sidenav1 a {font-size: 18px;}
 
   .Body_Padding_right{padding-right: 12px;}

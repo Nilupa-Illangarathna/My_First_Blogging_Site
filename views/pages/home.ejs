@@ -1,7 +1,8 @@
 <!-- Head.ejs adding -->
 <%- include('../partials/header'); %>
 
-<% let currentPost = 0; %>
+<% let currentPostData = -1; %>
+
 
 <body>  
     <!-- Sidebar -->
@@ -21,14 +22,20 @@
     <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
 
 
-    <% if(StartingContent.length!==0){  %>
-        <p class="Body_Padding_left Body_Padding_right"><%= StartingContent[currentPost].Date %></p> 
-        <br>
-        <p class="Body_Padding_left Body_Padding_right"><%= StartingContent[currentPost].Title %></p> 
-        <p class="Body_Padding_left Body_Padding_right"><%= StartingContent[currentPost].Content %></p> 
-        <br>
+    <% if(ArrayofPosts.length ===0 && currentPostData=== -1){  %>
+      <p class="Body_Padding_left Body_Padding_right">Compose a new post</p> 
     <% } else{ %>
-        <p class="Body_Padding_left Body_Padding_right">Compose a new post</p> 
+            <% if(ArrayofPosts.length !==0 && currentPostData === -1){  %>
+        <p class="Body_Padding_left Body_Padding_right">Select a post</p> 
+
+        
+      <% } else{ %>      
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Date %></p> 
+        <br>
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Title %></p> 
+        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Content %></p> 
+        <br>
+      <% } %>
     <% } %>
 
 
