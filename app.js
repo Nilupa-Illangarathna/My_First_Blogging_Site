@@ -29,8 +29,7 @@ app.get("/",function(req,res){
     res.render(
             "pages/home" ,
             {
-                StateOfThePage:0,
-                IndexesArray:[],
+                IndexesOfThePost:-1,
                 HeaderOfThePage : HomeHeaderVariable,
                 ArrayofPosts : PostsData,
             }
@@ -67,24 +66,27 @@ app.get("/compose",function(req,res){
 //////////////////////////////////////////////////
 //To use any post request/////////////////////////
 app.get("/posts/:newPost",function(req,res){
-    if(req.params.newPost!==""){
-        res.render(
-            "pages/home_2" ,
-            {
-                StateOfThePage:0,
-                IndexesArray:[],
-                HeaderOfThePage : HomeHeaderVariable,
-                ArrayofPosts : PostsData,
-            }
-        );
-    }
+    // res.render("homepage",{textVariable:HeaderVariable});
+    console.log(typeof(req.params.newPost));
+    res.render(
+        "pages/home" ,
+        {
+            IndexesOfThePost:Number(req.params.newPost),
+            HeaderOfThePage : "Homeworks",
+            ArrayofPosts : PostsData,
+        }
+    );
 })
-app.get("/posts/:newPost/:secondPost",function(req,res){
-    console.log(req.params.newPost);
-    console.log(req.params.secondPost);
-})
+// app.get("/posts/:newPost/:secondPost",function(req,res){
+//     console.log(req.params.newPost);
+//     console.log(req.params.secondPost);
+// })
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
+
+
+
+
 
 //get responses from html pages
 // Home page
@@ -117,22 +119,22 @@ app.post("/compose",function(req,res){
                     }
                     if(!titleCheck){
                         console.log("no");
-                        PostsData[i].push([req.body.title,[req.body.content]]);
+                        PostsData[i].push([req.body.title,req.body.content]);
                     }
                     dateCheck=true;
                 }
             }
             if(!dateCheck){
                 console.log("no");
-                PostsData.push([req.body.date,[req.body.title,[req.body.content]]]);
+                PostsData.push([req.body.date,[req.body.title,req.body.content]]);
             }
         }
         else{
             console.log("no");
-            PostsData.push([req.body.date,[req.body.title,[req.body.content]]]);
+            PostsData.push([req.body.date ,[req.body.title , req.body.content]]);
         }
     }
-    console.log(req.body);
+    console.log(PostsData);
 }
 )
 

@@ -1,9 +1,6 @@
 <!-- Head.ejs adding -->
 <%- include('../partials/header'); %>
 
-<% let currentPostData = -1; %>
-
-
 <body>  
     <!-- Sidebar -->
     <%- include('../partials/sidebar'); %>
@@ -22,18 +19,23 @@
     <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
 
 
-    <% if(ArrayofPosts.length ===0 && currentPostData=== -1){  %>
+    <% if(ArrayofPosts.length ===0){  %>
       <p class="Body_Padding_left Body_Padding_right">Compose a new post</p> 
     <% } else{ %>
-            <% if(ArrayofPosts.length !==0 && currentPostData === -1){  %>
+            <% if(IndexesOfThePost=== -1){  %>
         <p class="Body_Padding_left Body_Padding_right">Select a post</p> 
-
-        
-      <% } else{ %>      
-        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Date %></p> 
+      <% } else{ %>     
+        <br> 
+        <h3 class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[IndexesOfThePost][0] %></h3>
         <br>
-        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Title %></p> 
-        <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[currentPostTitle].Content %></p> 
+        <% for(let i=1;i< ArrayofPosts[IndexesOfThePost].length ; i++){ %>  
+        <div class="border border-secondary margine_top_bottom"> 
+              <h4><p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[IndexesOfThePost][i][0] %></p></h4> 
+              <% for(let j=1;j< ArrayofPosts[IndexesOfThePost][i].length ; j++){ %>   
+                <p class="Body_Padding_left Body_Padding_right"><%= ArrayofPosts[IndexesOfThePost][i][j] %></p>
+            <%  } %>   
+        </div> 
+        <%  } %>  
         <br>
       <% } %>
     <% } %>

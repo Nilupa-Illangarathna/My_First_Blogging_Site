@@ -2,8 +2,8 @@
 function openNav1() {
 
   if(document.getElementById("mySidenav1").style.width === "0%" && document.getElementById("main").style.marginLeft === "0%"){
-    document.getElementById("mySidenav1").style.width = "35%";
-    document.getElementById("main").style.marginLeft= "35%";
+    document.getElementById("mySidenav1").style.width = "25%";
+    document.getElementById("main").style.marginLeft= "25%";
   }
   else{
   document.getElementById("mySidenav1").style.width = "0%";

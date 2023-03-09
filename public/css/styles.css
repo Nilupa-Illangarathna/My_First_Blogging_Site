@@ -172,3 +172,11 @@ footer{
   background-color: #383636;
   border-color: #383636;
 }
+
+/* home related */
+.margine_top_bottom{
+  /* margin-top: 64px; */
+  margin: 0px 64px 16px 64px;
+  padding: 16px 16px 16px 0px;
+  text-align: justify;
+}

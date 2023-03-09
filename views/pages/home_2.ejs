@@ -1,9 +1,5 @@
 <!-- Head.ejs adding -->
 <%- include('../partials/header'); %>
-
-<% let currentPostData = -1; %>
-
-
 <body>  
     <!-- Sidebar -->
     <%- include('../partials/sidebar'); %>
@@ -22,10 +18,10 @@
     <h1 class="Body_Padding_left Body_Padding_right"><%= HeaderOfThePage %></h1> 
 
 
-    <% if(ArrayofPosts.length ===0 && currentPostData=== -1){  %>
+    <% if(ArrayofPosts.length ===0){  %>
       <p class="Body_Padding_left Body_Padding_right">Compose a new post</p> 
     <% } else{ %>
-            <% if(ArrayofPosts.length !==0 && currentPostData === -1){  %>
+            <% if(ArrayofPosts.length !==0){  %>
         <p class="Body_Padding_left Body_Padding_right">Select a post</p> 
 
         
