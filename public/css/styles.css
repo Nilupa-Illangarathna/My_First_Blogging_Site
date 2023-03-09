@@ -115,6 +115,8 @@ nav {
   .Body_Padding_left{padding-left: 12px;}
 
   .Hidden{visibility: hidden;}
+
+
 }
 
 /* the button used to open/close sidebar */
@@ -173,10 +175,3 @@ footer{
   border-color: #383636;
 }
 
-/* home related */
-.margine_top_bottom{
-  /* margin-top: 64px; */
-  margin: 0px 64px 16px 64px;
-  padding: 16px 16px 16px 0px;
-  text-align: justify;
-}
