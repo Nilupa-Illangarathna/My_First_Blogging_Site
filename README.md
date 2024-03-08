@@ -36,6 +36,32 @@ This web application, titled "Daily Journal," allows users to compose and manage
 - **`app.js`:** The main application file that configures and runs the Express server.
 - **`resources/`:** Holds images and sounds used in the application.
 
+<table>
+  <tr>
+    <td>Home Page</td>
+    <td>About Page</td>
+    <td>Compose Page</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/a79cec58-eaf6-46e0-a296-ffa66938710b" width=400></td>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/8b75001c-0db9-40ca-a1c9-b5673c1f4481" width=400></td>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/583dd3bb-ce87-4c3b-a8ab-9ee2c4062be5" width=400></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Post View</td>
+    <td>Contact Page</td>
+    <td>Additional View</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/7d3961e3-02dc-4227-84a7-d00b25b24869" width=400></td>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/71368b25-9006-4777-a289-49681cea35de" width=400></td>
+    <td><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/f3a77d8c-9fb1-45a0-bb41-2210a5c53c4c" width=400></td>
+  </tr>
+</table>
+
+
 ## Usage
 
 1. Install dependencies: `npm install`
