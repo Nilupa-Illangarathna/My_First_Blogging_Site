@@ -4,6 +4,19 @@
 
 This web application, titled "Daily Journal," allows users to compose and manage journal entries. Users can navigate through the home page, about page, and contact page. The application also provides functionality for composing new journal entries, viewing existing entries, and exploring posts.
 
+
+[![Express.js](https://img.shields.io/badge/Express.js-4.x-blue.svg)](https://expressjs.com/)
+[![EJS](https://img.shields.io/badge/EJS-3.x-orange.svg)](https://ejs.co/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-4.x-purple.svg)](https://getbootstrap.com/)
+[![Font Awesome](https://img.shields.io/badge/Font%20Awesome-5.x-blueviolet.svg)](https://fontawesome.com/)
+[![jQuery](https://img.shields.io/badge/jQuery-3.x-yellow.svg)](https://jquery.com/)
+[![Popper.js](https://img.shields.io/badge/Popper.js-2.x-brightgreen.svg)](https://popper.js.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-14.x-green.svg)](https://nodejs.org/)
+[![Body Parser](https://img.shields.io/badge/Body%20Parser-1.x-lightgrey.svg)](https://www.npmjs.com/package/body-parser)
+[![HTML5](https://img.shields.io/badge/HTML5-red.svg)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 ## Technologies Used
 
 - **Express.js:** A web application framework for Node.js, providing a robust set of features.
