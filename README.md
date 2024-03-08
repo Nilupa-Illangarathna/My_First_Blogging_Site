@@ -38,28 +38,28 @@ This web application, titled "Daily Journal," allows users to compose and manage
 
 <table>
   <tr>
-    <td>Compose Page</td>
-    <td>Contact Page</td>
-  </tr>
-  <tr>
-    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/583dd3bb-ce87-4c3b-a8ab-9ee2c4062be5" width="100%"></td>
-    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/71368b25-9006-4777-a289-49681cea35de" width="100%"></td>
-  </tr>
-  <tr>
-    <td>About Page</td>
-    <td>Detailed View Page</td>
-  </tr>
-  <tr>
-    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/8b75001c-0db9-40ca-a1c9-b5673c1f4481" width="100%"></td>
-    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/7d3961e3-02dc-4227-84a7-d00b25b24869" width="100%"></td>
-  </tr>
-  <tr>
-    <td>Side Pane View</td>
     <td>Homepage</td>
+    <td>Compose Page</td>
   </tr>
   <tr>
     <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/f3a77d8c-9fb1-45a0-bb41-2210a5c53c4c" width="100%"></td>
     <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/a79cec58-eaf6-46e0-a296-ffa66938710b" width="100%"></td>
+  </tr>
+  <tr>
+    <td>Contact Page</td>
+    <td>Side Pane View</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/8b75001c-0db9-40ca-a1c9-b5673c1f4481" width="100%"></td>
+    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/71368b25-9006-4777-a289-49681cea35de" width="100%"></td>
+  </tr>
+  <tr>
+    <td>Detailed View Page</td>
+    <td>About Page</td>
+  </tr>
+  <tr>
+    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/7d3961e3-02dc-4227-84a7-d00b25b24869" width="100%"></td>
+    <td style="width: 50%;"><img src="https://github.com/Nilupa-Illangarathna/My_First_Blogging_Site/assets/95247831/583dd3bb-ce87-4c3b-a8ab-9ee2c4062be5" width="100%"></td>
   </tr>
 </table>
 
